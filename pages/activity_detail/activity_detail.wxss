@@ -1,0 +1,163 @@
+.main {
+  height: 3000rpx;
+}
+
+swiper {
+  height: 300rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.title_secton {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin: 8rpx 8rpx;
+}
+
+.price_section {
+  display: flex;
+  flex-direction: row;
+  margin: 8rpx 8rpx;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.price {
+  color: #ee0202;
+  font-size: 25rpx;
+}
+
+.price image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.price_number {
+  font-size: 35rpx;
+  font-weight: 600;
+  margin-right:10rpx;
+}
+
+.share {
+  font-size: 25rpx;
+  margin-right: 15rpx;
+  background-color: #ffffff;
+  padding: 0;
+  line-height: 25rpx;
+  border-color:#3d85c6;
+}
+
+.share::after {
+  border: none;
+}
+
+.share image {
+  height: 20rpx;
+  width:20rpx;
+  margin-right: 10rpx;
+}
+
+.theme_section {
+  width: 100%;
+  height: 200rpx;
+  background-color: #F0F8FF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.theme {
+  padding: 15rpx 15rpx;
+  height:30rpx;
+  line-height: 30rpx;
+  margin: 20rpx 10rpx 0 10rpx;
+  font-size: 25rpx;
+  text-align: center;
+  color: #3d85c6;
+  border: 2rpx dashed #3d85c6;
+  border-radius: 15rpx;
+}
+
+.message_section {
+  font-size: 25rpx;
+  padding: 0 10rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #E5E9F2;
+}
+
+.message_section image{
+  width: 25rpx;
+  height:25rpx;
+  margin-right:6rpx;
+}
+
+.content {
+  color:#99A9BF;
+}
+
+.article_section {
+  width: 100%;
+  background-color: #F9FAFC;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  color: #666666;
+  font-size:25rpx;
+  background-color: #F9FAFC;
+}
+
+.nav view{
+  line-height: 50rpx;
+  width: 25%;
+  text-align: center;
+}
+
+.nav_active {
+  border-bottom:4rpx solid #3d85c6;
+}
+
+
+.button_section {
+  width:100%;
+  height:80rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  z-index: 9000;
+  background-color: white;
+}
+
+.button_section image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.talk_btn,.phone_btn {
+  padding: 10rpx 0 0 0;
+  width: 20%;
+  text-align:center;
+  color: #666666;
+  border-right:1rpx solid #E5E9F2;
+  font-size: 25rpx;
+  line-height: 25rpx;
+}
+
+.talk_btn::after,.phone_btn::after {
+  border: none;
+}
+
+.book_btn {
+  width: 60%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #3d85c6;
+  color:white;
+  border-radius: 0;
+}
+

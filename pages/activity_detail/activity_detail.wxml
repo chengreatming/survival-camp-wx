@@ -1,0 +1,72 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
+<scroll-view class="main" scroll-y="{{true}}" bindscroll="navFixed">
+  <swiper indicatorDots="{{true}}" autoplay="{{true}}">
+    <block wx:for="{{article.coverImg}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="title_secton">{{article.title}}</view>
+  <view class="price_section">
+    <view class="price">
+      <image src="/images/price.png"></image>
+      <text class="price_number">{{article.price}}</text><text>元/人</text>
+    </view>
+    <button class="share" open-type="share">
+      <image src="/images/share.png"></image>
+      <text>转发</text>
+    </button>
+  </view>
+  <view class="theme_section">
+    <view class="theme" wx:for="{{article.theme}}">{{item}}</view>
+  </view>
+  <view class="message_section">
+    <text>集合地点：</text><image src="/images/location.png"></image><text class="content">{{article.assemblyPlace}}</text>
+  </view>
+  <view class="message_section">
+    <text>目的地：</text><image src="/images/destination.png"></image><text class="content">{{article.destination}}</text>
+  </view>
+  <view class="message_section">
+    <text>出行日期：</text><image src="/images/days.png"></image><text class="content">{{article.days}}</text>
+  </view>
+  <view class="article_section">
+    <view class="nav" id="nav">
+      <view id="introduction" class="{{showId=='introduction'? 'nav_active':''}}"  bindtap="switchShowId">线路简介</view>
+      <view id="trip" class="{{showId=='trip'? 'nav_active':''}}" bindtap="switchShowId">行程</view>
+      <view id="expense" class="{{showId=='expense'? 'nav_active':''}}" bindtap="switchShowId">费用说明</view>
+      <view id="book" class="{{showId=='book'? 'nav_active':''}}" bindtap="switchShowId">预定须知</view>
+    </view>
+    <view id="introduction" class="article" wx:if="{{showId=='introduction'}}">
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:introduction.nodes}}"/>
+      </view>
+    </view>
+    <view id="trip" class="article" wx:if="{{showId=='trip'}}">
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:trip.nodes}}"/>
+      </view>
+    </view>
+    <view id="expense" class="article" wx:if="{{showId=='expense'}}">
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:expense.nodes}}"/>
+      </view>
+    </view>
+    <view id="book" class="article" wx:if="{{showId=='book'}}">
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:book.nodes}}"/>
+      </view>
+    </view>
+    <view class="button_section">
+      <contact-button class="talk_btn">
+        <view><text>客服</text></view>
+      </contact-button>
+      <view class="phone_btn" bindtap="phonecall">
+        <view><image src="/images/phone.png"></image></view>
+        <view><text>电话</text></view>
+      </view>
+      <button class="book_btn" loading="{{bookLoading}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即预定</button>
+    </view>
+  </view>
+</scroll-view>

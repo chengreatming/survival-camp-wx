@@ -1,0 +1,37 @@
+<view class="nav">
+  <view class="nav-item" wx:for="{{navItem}}">
+    <view>
+      <image src="{{item.imageUrl}}"/>
+    </view>
+    <view>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<scroll-view class="skill_main" scroll-y>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image class="slide-image" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{skillArticle}}">   
+  <view class="article-item">
+    <view class="article-image">
+      <image src="{{item.imgUrl}}"></image>
+    </view>
+    <view class="article-column">
+      <view class="article-title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="article-summary">
+        <text>{{item.summary}}</text>
+      </view>
+    </view>
+  </view>
+  </block>
+</scroll-view>
+
+
+

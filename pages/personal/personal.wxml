@@ -1,0 +1,41 @@
+<view class="personal_page">
+  <view class="title">
+    <text>{{title}}</text>
+  </view>
+  <view class="form_wrap">
+    <form>
+      <view>
+        <input value="{{destination}}" bindinput="destinationInput" type="text" placeholder="输入目的地"  />
+      </view>
+      <view>
+        <picker mode="date" bindchange="beginDateChange" value="{{beginDate}}" start="{{beginDate}}" end="2020-12-31" bindchange="beginDateChange" >
+          <view class="picker">
+            出行日期：{{beginDate}}
+          </view>
+        </picker>  
+      </view>
+      <view>
+        <picker mode="date" bindchange="endDateChange" value="{{endDate}}" start="{{beginDate}}" end="2020-12-31" bindchange="endDateChange" >
+          <view class="picker">
+            结束日期：{{endDate}}
+          </view>
+        </picker>  
+      </view>
+      <view class="number">
+        <view class="number_item" style="margin-right:10%">
+          <input bindinput="adultInput" value="{{adult}}" type="number" placeholder="成人出行人数"  />
+        </view>
+        <view class="number_item">
+          <input bindinput="childrenInput" value="{{children}}" type="number" placeholder="儿童出行人数"  />
+        </view>
+      </view>
+      <view>
+        <input bindinput="phoneInput" value="{{phone}}" type="number" placeholder="输入联系电话" />
+      </view>
+      <view>
+        <input bindinput="remarkInput" class="remark" value="{{remark}}" type="textarea" placeholder="备注信息" />
+      </view>
+      <button bindtap="validate" disabled="{{btnHidden}}" form-type="submit" loading="{{loading}}">立即预定</button>
+    </form>
+  </view>
+</view>

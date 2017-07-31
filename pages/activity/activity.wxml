@@ -1,0 +1,39 @@
+<view class="activity_wrap">
+  <scroll-view class="activity_main" scroll-y>
+    <swiper 
+      style="height:300rpx"
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}"
+      duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <navigator url="/pages/activity_detail/activity_detail?id={{item.id}}" wx:for="{{activities}}">
+      <view class="activity_item">
+        <image src="{{item.imgUrl}}" class="activity_image"/>
+        <view class="title">
+          <text>{{item.title}}</text><image wx:if="{{item.isOver}}" src="/images/over.png"/>
+        </view>
+        <view class="subtitle">
+          <text>{{item.subtitle}}</text>
+        </view>
+        <view class="detail" wx:if="{{!item.isOver}}">
+          <view class="assemblyPlace">
+            <text>集合地点：{{item.assemblyPlace}}</text>
+          </view>
+          <view class="people">
+            <image src="/images/people.png"/><text>体验人数：{{item.people}}</text>
+          </view>
+          <view class="price">
+            <image src="/images/price.png"/><text>{{item.price}}元/人</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+

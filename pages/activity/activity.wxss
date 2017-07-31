@@ -1,0 +1,74 @@
+.activity_main {
+  height: 3000rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.activity_item {
+  height: 450rpx;
+  margin-top:20rpx;
+  overflow: hidden;
+}
+
+.activity_image {
+  height: 350rpx;
+  width: 100%;
+}
+
+.activity_item .title {
+  font-size: 25rpx;
+}
+
+.activity_item .subtitle {
+  font-size: 20rpx;
+  color: #666666;
+  margin:7rpx 10rpx;
+}
+
+.title,.subtitle,.detail {
+  margin-left: 10rpx;
+}
+
+.detail {
+  font-size: 18rpx;
+  color: #666666;
+  display: flex;
+  flex-direction:row;
+  line-height: 18rpx;
+}
+
+.detail view {
+  width:33%;
+}
+
+.people {
+  text-align: center;
+  color: #ee0202;
+}
+
+.price {
+  text-align: right;
+  color: #ee0202;
+}
+
+.people image{
+  width: 22rpx;
+  height: 16rpx;
+  margin-right: 5rpx;
+}
+
+.price image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-right: 5rpx;
+}
+
+.title image {
+  width: 73rpx;
+  height: 48rpx;
+  float: right;
+  margin: 0 15rpx 15rpx 0;
+}

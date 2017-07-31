@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/activity/activity",
+    "pages/skill/skill",
+    "pages/user/user",
+    "pages/personal/personal",
+    "pages/activity_detail/activity_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "一把刀户外",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#3d85c6",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#ffffff",
+    "list": [{
+      "pagePath": "pages/activity/activity",
+      "iconPath": "images/activity.png",
+      "selectedIconPath": "images/activity_active.png",
+      "text": "活动"
+    },
+    { 
+      "pagePath": "pages/skill/skill",
+      "iconPath": "images/skill.png",
+      "selectedIconPath": "images/skill_active.png",
+      "text": "生存特训"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "iconPath": "images/personal.png",
+      "selectedIconPath": "images/personal_active.png",
+      "text": "私人定制 "
+    },
+    {
+      "pagePath": "pages/user/user",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/user_active.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
