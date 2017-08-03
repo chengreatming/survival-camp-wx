@@ -1,5 +1,4 @@
 <import src="../../wxParse/wxParse.wxml"/>
-
 <scroll-view class="main" scroll-y="{{true}}" bindscroll="navFixed">
   <swiper indicatorDots="{{true}}" autoplay="{{true}}">
     <block wx:for="{{article.coverImg}}">

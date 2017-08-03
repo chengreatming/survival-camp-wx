@@ -1,0 +1,11 @@
+<view class="title">
+  <text>{{article.title}}</text>
+</view>
+<view class="summary">
+  <text>{{article.summary}}</text>
+</view>
+<scroll-view class="content" scroll-y="{{true}}">
+  <view >
+    {{article.content}}
+  </view>
+</scroll-view>

@@ -1,0 +1,20 @@
+.title {
+  font-size: 30rpx;
+  margin: 25rpx auto;
+  width: 90%;
+  text-align: center;
+}
+
+.summary {
+  font-size: 25rpx;
+  width: 100%;
+  background-color: #F9FAFC;
+  color: #666666;
+  line-height: 30rpx;
+  height: 150rpx;
+  padding: 0 30rpx 0 30rpx;
+}
+
+.content {
+  height: 2000rpx;
+}

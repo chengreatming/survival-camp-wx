@@ -16,20 +16,22 @@
       </swiper-item>
     </block>
   </swiper>
-  <block wx:for="{{skillArticle}}">   
-  <view class="article-item">
-    <view class="article-image">
-      <image src="{{item.imgUrl}}"></image>
-    </view>
-    <view class="article-column">
-      <view class="article-title">
-        <text>{{item.title}}</text>
+  <block wx:for="{{skillArticle}}">
+    <navigator url="/pages/skill_detail/skill_detail?id={{item.id}}">
+      <view class="article-item">
+        <view class="article-image">
+          <image src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="article-column">
+          <view class="article-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="article-summary">
+            <text>{{item.summary}}</text>
+          </view>
+        </view>
       </view>
-      <view class="article-summary">
-        <text>{{item.summary}}</text>
-      </view>
-    </view>
-  </view>
+    </navigator>
   </block>
 </scroll-view>
 

@@ -4,7 +4,8 @@
     "pages/skill/skill",
     "pages/user/user",
     "pages/personal/personal",
-    "pages/activity_detail/activity_detail"
+    "pages/activity_detail/activity_detail",
+    "pages/skill_detail/skill_detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
